@@ -1,19 +1,27 @@
-# 📚 KnowBase: A BI and Data Enablement Chatbot Assistant
+# KnowBase
 
-Built in just **4 prompts**, this is a fully working chatbot that can read your company’s **transcripts**, **onboarding docs**, and **trainings** — then answer questions with **real citations** from those files. Customizable, local, and dead simple to use.
+A chatbot that answers questions about your internal docs and cites exactly where it found the answer.
 
-View the prompting here: https://chatgpt.com/share/68ed3420-39f0-8000-a0e5-5d955d1a0c0c
+[Video demo](https://www.youtube.com/watch?v=susAiBKjLE4)
 
-View the video demo here: https://www.youtube.com/watch?v=susAiBKjLE4
+## Features
 
-## 🧠 Why it matters
-- ⚡ Fast onboarding and knowledge lookup  
-- 🔄 Consistent, sourced answers  
-- 🕵️ Audit-friendly with inline citations  
-- 🧰 Works on your own docs (PDF, DOC/DOCX, TXT)
+- Upload PDFs, Word docs, or plain text files and the chatbot indexes them on the spot
+- Ask a question in natural language and get a direct answer with inline citations pointing to the source document and passage
+- If the answer isn't in the docs, it says so instead of guessing
+- Reindex anytime as your document library changes
+- Built in 4 prompts from scratch, documented [here](https://chatgpt.com/share/68ed3420-39f0-8000-a0e5-5d955d1a0c0c)
 
-## 🚀 What it does
-- Indexes and searches local training materials  
-- Answers questions or says “Not in the docs”  
-- Streamlit UI for easy uploads and reindexing  
-- No external knowledge, just your content
+## Tech Stack
+
+- **Python** for all backend logic
+- **Streamlit** for the web UI, file uploads, and chat interface
+- **FAISS** for fast vector similarity search across document chunks
+- **OpenAI** for embeddings and answer generation with citation grounding
+- **PyMuPDF** for PDF text extraction
+
+## Privacy
+
+- Runs locally. Your documents stay on your machine.
+- No analytics, telemetry, or third-party data sharing.
+- OpenAI API calls send only the relevant text chunks needed to answer the query.
